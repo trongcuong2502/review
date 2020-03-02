@@ -1,0 +1,4 @@
+<div *ngIf="messageService.tinnhan.length">
+    <button (click)="messageService.clear()">clear</button>
+    <div *ngFor="let giatri of messageService.tinnhan">{{giatri}}</div>
+</div>

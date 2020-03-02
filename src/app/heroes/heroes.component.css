@@ -1,0 +1,8 @@
+table,td,th{border: 1px solid black;
+    border-collapse: collapse;
+}
+#selectionlist:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+  }
+ 

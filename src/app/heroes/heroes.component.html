@@ -1,0 +1,38 @@
+
+<div>
+   <table>
+       <tr>
+           <th>STT</th>
+           <th>Họ Tên</th>
+           <th>giới tính</th>
+       </tr>
+       <tr *ngFor="let giatri of listhero" id="selectionlist" >
+            <td><a  routerLink="/hero/{{giatri.id}}">{{giatri.id}}</a></td>
+            <td><a routerLink="/hero/{{giatri.id}}">{{giatri.name}}</a></td>
+            <td><a routerLink="/hero/{{giatri.id}}" >{{giatri.male}}</a></td>
+            <td><button class="delete" title="delete hero"
+                (click)="delete(giatri)">x</button></td>
+       </tr>
+   </table>
+</div>
+<button><a routerLink="/hero/add">thêm danh sách</a></button>
+<button  (click)="goBack()" > Thoát</button>
+<!--<h1>Danh sách học1 sinh giỏi {{listhero[0].name}}</h1>
+<div>
+   <table>
+       <tr>
+           <th>STT</th>
+           <th>Họ Tên</th>
+           <th>giới tính</th>
+       </tr>
+       <tr *ngFor="let giatri of listhero" id="selectionlist"
+       [class.selected]="giatri === selectedHero" (click)="onselectetd(giatri)" >
+            <td><a  routerLink="hero/{{giatri.id}}">{{giatri.id}}</a></td>
+            <td><a routerLink="hero/{{giatri.id}}">{{giatri.name}}</a></td>
+            <td><a routerLink="hero/{{giatri.id}}">{{giatri.male}}</a></td>
+       </tr>
+   </table>
+</div>
+
+<app-addlist [hero]="selectedHero"></app-addlist>
+-->

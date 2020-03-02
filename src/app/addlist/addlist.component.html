@@ -1,0 +1,36 @@
+
+<div *ngIf="giatri">
+  <div *ngIf="listheroes"> 
+    <h3>chi tiết:</h3>
+<label>
+    Họ và tên:<input [(ngModel)]="listheroes.name" />
+    <br>
+    Giới tính:
+   <!--
+<select >
+        <option *ngFor="let giatrimale of listmale" >{{giatrimale.why}}</option>
+    </select>
+   --> :<input [(ngModel)]="listheroes.male" />
+    <br>
+    <br>
+   <button (click)="update()">update</button>    <button (click)="goBack()">go back</button>
+</label>
+</div>
+</div>
+<br>
+<div *ngIf="!giatri">
+    <label>Hero name:
+      <input #heroName />
+    </label>
+    <br>
+    <label>giới tính:
+        <input #heroMale/>
+      </label>
+    <br>
+  
+    <br>
+    <button  (click)="add(heroName.value,heroMale.value); heroName.value=''; heroMale.value=''">
+      add
+    </button>
+    <button  (click)="goBack()" > go back</button>
+  </div>

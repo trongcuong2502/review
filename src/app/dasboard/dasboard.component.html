@@ -1,0 +1,7 @@
+
+<a *ngFor="let giatri of listdash" routerLink="dasboard/{{giatri.id}}">
+    <h3>{{giatri.name}}</h3>
+</a>
+<app-search></app-search>
+<button  (click)="goBack()" > Thoát</button>
+<br>
